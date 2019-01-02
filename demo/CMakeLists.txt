@@ -7,12 +7,12 @@ endif(COMMAND cmake_policy)
 FIND_PACKAGE( OpenCV REQUIRED )
 
 # Declare the target (an executable)
-ADD_EXECUTABLE(OpenCV_Example  main.c)
+ADD_EXECUTABLE(OpenCV_Example  main.c mat.c)
 
 TARGET_LINK_LIBRARIES(OpenCV_Example ${OpenCV_LIBS})
 SET(CMAKE_C_COMPILER "/usr/bin/c++")    # 强制编译c的时候也用c++
 SET(CMAKE_CXX_COMPILER "/usr/bin/c++")  # 使用具体的c++做编译器.
-set(CMAKE_C_FLAGS "-std=c++11")         # 因opencv需要c++11支持.
+set(CMAKE_C_FLAGS "-std=c++11 ")         # 因opencv需要c++11支持.
 
 #MESSAGE(STATUS "OpenCV_LIBS: ${OpenCV_LIBS}")
 
